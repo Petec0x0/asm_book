@@ -286,6 +286,21 @@
         "id": "9",
         "title": "Process Continuation Shellcode",
         "path": "section_5_exploitation/process_continuation.md"
+      },
+      {
+        "id": "10",
+        "title": "Glibc Heap Implementation",
+        "path": "section_5_exploitation/heap_glibc_implementation.md"
+      },
+      {
+        "id": "11",
+        "title": "Glibc Heap Free Bins",
+        "path": "section_5_exploitation/heap_free_bins.md"
+      },
+      {
+        "id": "12",
+        "title": "Heap Exploit Development",
+        "path": "section_5_exploitation/heap_exploit_dev.md"
       }
     ]
   },

@@ -329,6 +329,9 @@ This section adapts the highly regarded ARM32 exploitation tutorials from Azeria
 | 7 | [Return Oriented Programming (ARM64)](./section_5_exploitation/return_oriented_programming.md) |
 | 8 | [Stack Overflow Challenges](./section_5_exploitation/stack_overflow_challenges.md) |
 | 9 | [Process Continuation Shellcode](./section_5_exploitation/process_continuation.md) |
+| 10 | [Glibc Heap Implementation](./section_5_exploitation/heap_glibc_implementation.md) |
+| 11 | [Glibc Heap Free Bins](./section_5_exploitation/heap_free_bins.md) |
+| 12 | [Heap Exploit Development](./section_5_exploitation/heap_exploit_dev.md) |
 
 ## Macro Suite
 
