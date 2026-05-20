@@ -314,6 +314,21 @@ contained therein are applicable to all languages.
 | 9  | [argv](./more/argv_example/jess1.S) | ASM CODE |
 | 10 | [spin-locks](./more/spin-lock/) | [Link](./more/spin-lock/README.pdf) |
 | - | [Debugging Lecture](./debugging/Discourses%20and%20Dialogs%20on%20Debugging.pptx) | PPTX |
+### Section 5 - Exploitation & Security
+
+This section adapts the highly regarded ARM32 exploitation tutorials from Azeria Labs into ARM64 (AArch64).
+
+| Chapter | Markdown |
+| ------- | -------- |
+| 1 | [Debugging with GDB (ARM64)](./section_5_exploitation/debugging_with_gdb.md) |
+| 2 | [Writing ARM64 Shellcode](./section_5_exploitation/writing_arm64_shellcode.md) |
+| 3 | [TCP Bind Shell in Assembly](./section_5_exploitation/tcp_bind_shell.md) |
+| 4 | [TCP Reverse Shell in Assembly](./section_5_exploitation/tcp_reverse_shell.md) |
+| 5 | [Process Memory and Memory Corruption](./section_5_exploitation/process_memory_corruption.md) |
+| 6 | [Stack Overflows (ARM64)](./section_5_exploitation/stack_overflow.md) |
+| 7 | [Return Oriented Programming (ARM64)](./section_5_exploitation/return_oriented_programming.md) |
+| 8 | [Stack Overflow Challenges](./section_5_exploitation/stack_overflow_challenges.md) |
+| 9 | [Process Continuation Shellcode](./section_5_exploitation/process_continuation.md) |
 
 ## Macro Suite
 

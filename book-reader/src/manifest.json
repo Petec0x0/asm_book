@@ -1,0 +1,327 @@
+[
+  {
+    "title": "Section 1 - Bridging from C / C++ to Assembly Language",
+    "chapters": [
+      {
+        "id": "0",
+        "title": "Kickstart",
+        "path": "section_1/kickstart.md"
+      },
+      {
+        "id": "1",
+        "title": "Hello World",
+        "path": "section_1/hello_world/README.md"
+      },
+      {
+        "id": "2",
+        "title": "If Statements",
+        "path": "section_1/if/README.md"
+      },
+      {
+        "id": "3a",
+        "title": "While Loops",
+        "path": "section_1/while/README.md"
+      },
+      {
+        "id": "3b",
+        "title": "For Loops",
+        "path": "section_1/for/README.md"
+      },
+      {
+        "id": "3c",
+        "title": "Implementing Continue",
+        "path": "section_1/for/README.md#implementing-a-continue"
+      },
+      {
+        "id": "3d",
+        "title": "Implementing Break",
+        "path": "section_1/for/README.md#implementing-a-break"
+      },
+      {
+        "id": "4a",
+        "title": "Registers",
+        "path": "section_1/regs/README.md"
+      },
+      {
+        "id": "4b",
+        "title": "Load and Store",
+        "path": "section_1/regs/ldr.md"
+      },
+      {
+        "id": "4c",
+        "title": "More About `ldr`",
+        "path": "section_1/regs/ldr2.md"
+      },
+      {
+        "id": "4d",
+        "title": "Register Sizes",
+        "path": "section_1/regs/widths.md"
+      },
+      {
+        "id": "4e",
+        "title": "Hexadecimal",
+        "path": "section_1/hex.md"
+      },
+      {
+        "id": "5",
+        "title": "`switch`",
+        "path": "section_1/jump_tables/README.md"
+      },
+      {
+        "id": "6a",
+        "title": "Calling and Returning",
+        "path": "section_1/funcs/README.md"
+      },
+      {
+        "id": "6b",
+        "title": "Passing Parameters",
+        "path": "section_1/funcs/README2.md"
+      },
+      {
+        "id": "6c",
+        "title": "Example of calling some common C runtime functions",
+        "path": "section_1/funcs/README3.md"
+      },
+      {
+        "id": "7",
+        "title": "FizzBuzz - a Complete Program",
+        "path": "section_1/fizzbuzz/README.md"
+      },
+      {
+        "id": "8a",
+        "title": "Alignment",
+        "path": "section_1/structs/alignment.md"
+      },
+      {
+        "id": "8b",
+        "title": "Defining",
+        "path": "section_1/structs/defining.md"
+      },
+      {
+        "id": "8c",
+        "title": "Using",
+        "path": "section_1/structs/using.md"
+      },
+      {
+        "id": "8d",
+        "title": "What is \"this\"",
+        "path": "section_1/structs/this.md"
+      },
+      {
+        "id": "9",
+        "title": "`const`",
+        "path": "section_1/const/README.md"
+      }
+    ]
+  },
+  {
+    "title": "Section 2 - Floating Point",
+    "chapters": [
+      {
+        "id": "0",
+        "title": "Chapter Overview",
+        "path": "section_2/float/README.md"
+      },
+      {
+        "id": "1",
+        "title": "What Are Floating Point Numbers?",
+        "path": "section_2/float/what.md"
+      },
+      {
+        "id": "2",
+        "title": "Registers",
+        "path": "section_2/float/working.md"
+      },
+      {
+        "id": "3",
+        "title": "Truncation and Rounding",
+        "path": "section_2/float/rounding.md"
+      },
+      {
+        "id": "4",
+        "title": "Literals",
+        "path": "section_2/float/literals.md"
+      },
+      {
+        "id": "5",
+        "title": "`fmov`",
+        "path": "section_2/float/fmov.md"
+      },
+      {
+        "id": "6",
+        "title": "Half Precision Floats",
+        "path": "section_2/float/half.md"
+      },
+      {
+        "id": "7",
+        "title": "NEON SIMD Not Yet Written",
+        "path": "not_written_yet.md"
+      }
+    ]
+  },
+  {
+    "title": "Section 3 - Bit Manipulation",
+    "chapters": [
+      {
+        "id": "1a",
+        "title": "Without Bit Fields",
+        "path": "section_3/bitfields/README.md"
+      },
+      {
+        "id": "1b",
+        "title": "With Bit Fields",
+        "path": "section_3/bitfields/with.md"
+      },
+      {
+        "id": "1c",
+        "title": "Review of Newly Described Instructions",
+        "path": "section_3/bitfields/review.md"
+      },
+      {
+        "id": "2",
+        "title": "Endianness",
+        "path": "section_3/endian/README.md"
+      }
+    ]
+  },
+  {
+    "title": "Section 4 - More Stuff",
+    "chapters": [
+      {
+        "id": "1",
+        "title": "Apple Silicon",
+        "path": "more/apple_silicon/README.md"
+      },
+      {
+        "id": "2",
+        "title": "Apple / Linux Convergence",
+        "path": "macros"
+      },
+      {
+        "id": "3",
+        "title": "Variadic Functions",
+        "path": "more/varargs/README.md"
+      },
+      {
+        "id": "4",
+        "title": "Under the hood: System Calls",
+        "path": "more/system_calls/README.md"
+      },
+      {
+        "id": "5",
+        "title": "Determining string literal lengths for C functions",
+        "path": "more/strlen_for_c/README.md"
+      },
+      {
+        "id": "6",
+        "title": "Calling Assembly Language From Python",
+        "path": "python/"
+      },
+      {
+        "id": "7",
+        "title": "Atomic Operations",
+        "path": "more/atomics/README.md"
+      },
+      {
+        "id": "8",
+        "title": "Jump Tables",
+        "path": "more/jump_tables/README.md"
+      },
+      {
+        "id": "9",
+        "title": "argv",
+        "path": "more/argv_example/jess1.S"
+      },
+      {
+        "id": "10",
+        "title": "spin-locks",
+        "path": "more/spin-lock/"
+      }
+    ]
+  },
+  {
+    "title": "Section 5 - Exploitation & Security",
+    "chapters": [
+      {
+        "id": "1",
+        "title": "Debugging with GDB (ARM64)",
+        "path": "section_5_exploitation/debugging_with_gdb.md"
+      },
+      {
+        "id": "2",
+        "title": "Writing ARM64 Shellcode",
+        "path": "section_5_exploitation/writing_arm64_shellcode.md"
+      },
+      {
+        "id": "3",
+        "title": "TCP Bind Shell in Assembly",
+        "path": "section_5_exploitation/tcp_bind_shell.md"
+      },
+      {
+        "id": "4",
+        "title": "TCP Reverse Shell in Assembly",
+        "path": "section_5_exploitation/tcp_reverse_shell.md"
+      },
+      {
+        "id": "5",
+        "title": "Process Memory and Memory Corruption",
+        "path": "section_5_exploitation/process_memory_corruption.md"
+      },
+      {
+        "id": "6",
+        "title": "Stack Overflows (ARM64)",
+        "path": "section_5_exploitation/stack_overflow.md"
+      },
+      {
+        "id": "7",
+        "title": "Return Oriented Programming (ARM64)",
+        "path": "section_5_exploitation/return_oriented_programming.md"
+      },
+      {
+        "id": "8",
+        "title": "Stack Overflow Challenges",
+        "path": "section_5_exploitation/stack_overflow_challenges.md"
+      },
+      {
+        "id": "9",
+        "title": "Process Continuation Shellcode",
+        "path": "section_5_exploitation/process_continuation.md"
+      }
+    ]
+  },
+  {
+    "title": "Projects",
+    "chapters": [
+      {
+        "id": "p0",
+        "title": "First Project",
+        "path": "projects/first_project/README.md"
+      },
+      {
+        "id": "p1",
+        "title": "DIRENT",
+        "path": "projects/DIRENT/README.md"
+      },
+      {
+        "id": "p2",
+        "title": "PI",
+        "path": "projects/PI/README.md"
+      },
+      {
+        "id": "p3",
+        "title": "SINE",
+        "path": "projects/SINE/README.md"
+      },
+      {
+        "id": "p4",
+        "title": "SNOW",
+        "path": "projects/snow/README.md"
+      },
+      {
+        "id": "p5",
+        "title": "WALKIES",
+        "path": "projects/walkies/README.md"
+      }
+    ]
+  }
+]
