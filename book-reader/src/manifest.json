@@ -338,5 +338,75 @@
         "path": "projects/walkies/README.md"
       }
     ]
+  },
+  {
+    "title": "Course: C for Systems & Reverse Engineering",
+    "chapters": [
+      {
+        "id": "c0",
+        "title": "Course Overview & Roadmap",
+        "path": "c_course/README.md"
+      },
+      {
+        "id": "c1",
+        "title": "Module 1 - The Machine Model & Tooling",
+        "path": "c_course/01_machine_model_tooling.md"
+      },
+      {
+        "id": "c2",
+        "title": "Module 2 - Data Types, Memory & Bitwise Logic",
+        "path": "c_course/02_types_memory_bitwise.md"
+      },
+      {
+        "id": "c3",
+        "title": "Module 3 - Control Flow, Stack Frames & ABIs",
+        "path": "c_course/03_control_flow_stack_frames.md"
+      },
+      {
+        "id": "c4",
+        "title": "Module 4 - Pointers, Addressing & Pointer Arithmetic",
+        "path": "c_course/04_pointers_and_memory.md"
+      },
+      {
+        "id": "c5",
+        "title": "Module 5 - Strings, Buffers & Memory Safety",
+        "path": "c_course/05_strings_and_memory_safety.md"
+      },
+      {
+        "id": "c6",
+        "title": "Module 6 - Structs, Unions & Memory Alignment",
+        "path": "c_course/06_structs_unions_alignment.md"
+      },
+      {
+        "id": "c7",
+        "title": "Module 7 - Dynamic Memory & Heap Internals",
+        "path": "c_course/07_heap_dynamic_memory.md"
+      },
+      {
+        "id": "c8",
+        "title": "Module 8 - Function Pointers & Callbacks",
+        "path": "c_course/08_function_pointers_callbacks.md"
+      },
+      {
+        "id": "c9",
+        "title": "Module 9 - POSIX Systems & System Calls",
+        "path": "c_course/09_posix_system_calls.md"
+      },
+      {
+        "id": "c10",
+        "title": "Module 10 - Preprocessor, Makefiles & Libraries",
+        "path": "c_course/10_preprocessor_makefiles_libs.md"
+      },
+      {
+        "id": "c11",
+        "title": "Module 11 - Capstone 1: Key-Value Database",
+        "path": "c_course/11_capstone_kv_store.md"
+      },
+      {
+        "id": "c12",
+        "title": "Module 12 - Capstone 2: Binary Protocol Parser",
+        "path": "c_course/12_capstone_binary_protocol_parser.md"
+      }
+    ]
   }
 ]

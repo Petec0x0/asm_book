@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useParams } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import MarkdownRenderer from './components/MarkdownRenderer';
-import { Menu, X } from 'lucide-react';
+import CPULator from './simulator/CPULator';
+import CRunner from './simulator/CRunner';
+import { Menu, X, Cpu } from 'lucide-react';
 
 const ReaderView = () => {
   const { '*': path } = useParams();
-  return <MarkdownRenderer path={decodeURIComponent(path)} />;
+  return <MarkdownRenderer path={decodeURIComponent(path || '')} />;
 };
 
 function App() {
@@ -17,10 +19,14 @@ function App() {
   return (
     <Router>
       <div className="mobile-header">
-        <div className="sidebar-title" style={{ marginBottom: 0 }}>Asm Book</div>
+        <div className="sidebar-title flex items-center gap-2" style={{ marginBottom: 0 }}>
+          <Cpu size={20} className="text-cyan-400" />
+          <span>Low-Level Lab</span>
+        </div>
         <button 
           onClick={toggleSidebar}
           style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer' }}
+          aria-label="Toggle Navigation Menu"
         >
           {isSidebarOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -32,6 +38,25 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/read/section_1%2Fkickstart.md" replace />} />
           <Route path="/read/*" element={<ReaderView />} />
+          <Route path="/simulator" element={
+            <div className="full-tool-wrapper">
+              <div className="tool-intro-header">
+                <h2>⚡ ARM64 CPULator Simulator & Debugger</h2>
+                <p>Interactive AArch64 execution engine, step-debugging, 64-bit registers (X0-X30, SP, PC), NZCV condition flags, memory inspector, and Linux syscall console.</p>
+              </div>
+              <CPULator />
+            </div>
+          } />
+          <Route path="/c-sandbox" element={
+            <div className="full-tool-wrapper">
+              <div className="tool-intro-header">
+                <h2>💻 C Systems Sandbox & Disassembler</h2>
+                <p>Run C code, experiment with pointers and memory representation, and view compiled ARM64 disassembly output.</p>
+              </div>
+              <CRunner />
+            </div>
+          } />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
     </Router>
