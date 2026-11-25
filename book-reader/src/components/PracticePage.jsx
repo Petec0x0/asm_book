@@ -5,7 +5,7 @@ import CPULator from '../simulator/CPULator';
 import CRunner from '../simulator/CRunner';
 import { LEVELS } from '../data/levels';
 import { C_LABS } from '../data/cLabs';
-import { getProgress, onProgressChange, streak, localDay, exportProgress, importProgress } from '../lib/progress';
+import { getProgress, onProgressChange, streak, solvedOn, localDay, exportProgress, importProgress } from '../lib/progress';
 import { lessonUrl } from '../lib/routes';
 import { useTitle } from '../lib/useTitle';
 
@@ -40,7 +40,7 @@ export default function PracticePage() {
   const level = ITEMS.find(l => l.id === selectedId) || ITEMS[0];
   const solvedCount = ITEMS.filter(l => solved[l.id]).length;
   const trackOf = (id) => (C_LABS.some(l => l.id === id) ? 'c' : 'arm64');
-  const doneToday = progress.days[today] || 0;
+  const doneToday = solvedOn(today, progress);
   const currentStreak = streak(progress);
 
   const select = (id) => {
