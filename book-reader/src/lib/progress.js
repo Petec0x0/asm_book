@@ -37,10 +37,18 @@ export function markSolved(id) {
   const data = load();
   const today = localDay();
   if (!data.solved[id]) data.solved[id] = { first: today, count: 0 };
-  data.solved[id].count += 1;
+  const firstTimeToday = data.solved[id].last !== today;
+  data.solved[id].count += 1; // every passing check, for the learner's own record
   data.solved[id].last = today;
-  data.days[today] = (data.days[today] || 0) + 1;
+  // A day counts each challenge once, however many times Check passes.
+  if (firstTimeToday) data.days[today] = (data.days[today] || 0) + 1;
   save(data);
+}
+
+// Distinct challenges solved on the given day. Read from `solved` rather than
+// `days`, so counts inflated by an older version (one per Check click) do not show.
+export function solvedOn(day, data = load()) {
+  return Object.values(data.solved).filter(s => s && s.last === day).length;
 }
 
 export function saveDraft(id, code) {
