@@ -1029,6 +1029,33 @@ a {
   tab-size: 4;
 }
 
+/* C sandbox: coloured code layer behind a transparent-text textarea.
+   Both layers share .editor-textarea, so font, padding and line height match. */
+.editor-code {
+  flex: 1;
+  position: relative;
+  min-width: 0;
+  align-self: stretch;
+}
+.editor-code .editor-highlight {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  color: #e2e8f0;
+}
+.editor-code .editor-input {
+  position: relative;
+  display: block;
+  width: 100%;
+  color: transparent;
+  caret-color: #e2e8f0;
+}
+.editor-code .editor-input::selection {
+  color: transparent;
+  background: rgba(56, 189, 248, 0.3);
+}
+
 /* CPULator Challenge Verification Box */
 .cpulator-challenge-box {
   padding: 1rem;
