@@ -8,6 +8,7 @@ import { gradeCLab } from '../lib/cGrader';
 import { markSolved, saveDraft, getDraft } from '../lib/progress';
 import { copyText } from '../lib/clipboard';
 import { splitCodeFiles, primaryFile } from '../lib/codeFiles';
+import CodeHighlight from './CodeHighlight';
 
 const LINE_HEIGHT = 22;
 const isSource = (n) => /\.(c|h|s|S)$/.test(n);
@@ -47,6 +48,7 @@ export default function CRunner({ initialCode = null, onLoadAsmInCpulator = null
   const [busy, setBusy] = useState(false);
   const [copied, setCopied] = useState(false);
   const taRef = useRef(null);
+  const hlRef = useRef(null); // coloured copy behind the textarea, kept in horizontal step with it
 
   const current = files.find(f => f.name === active) || files[0];
   const lines = (current?.content ?? '').split('\n');
@@ -241,16 +243,22 @@ export default function CRunner({ initialCode = null, onLoadAsmInCpulator = null
                 );
               })}
             </div>
-            <textarea
-              ref={taRef}
-              value={current?.content ?? ''}
-              onChange={(e) => { updateActive(e.target.value); setSample('custom'); }}
-              onKeyDown={onEditorKeyDown}
-              spellCheck="false" autoCapitalize="off" autoCorrect="off" wrap="off"
-              className="editor-textarea"
-              style={{ height: `${lines.length * LINE_HEIGHT + 16}px` }}
-              aria-label={`Contents of ${current?.name}`}
-            />
+            <div className="editor-code">
+              <div className="editor-textarea editor-highlight" aria-hidden="true" ref={hlRef}>
+                <CodeHighlight code={current?.content ?? ''} fileName={current?.name} />
+              </div>
+              <textarea
+                ref={taRef}
+                value={current?.content ?? ''}
+                onChange={(e) => { updateActive(e.target.value); setSample('custom'); }}
+                onKeyDown={onEditorKeyDown}
+                onScroll={(e) => { if (hlRef.current) hlRef.current.scrollLeft = e.target.scrollLeft; }}
+                spellCheck="false" autoCapitalize="off" autoCorrect="off" wrap="off"
+                className="editor-textarea editor-input"
+                style={{ height: `${lines.length * LINE_HEIGHT + 16}px` }}
+                aria-label={`Contents of ${current?.name}`}
+              />
+            </div>
           </div>
           {lab && (
             <div className="cpulator-challenge-box">
